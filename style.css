@@ -1,0 +1,143 @@
+/* Colors and variables */
+:root{
+	--color1: rgb(226,226,233);
+	--color2: rgb(12,49,97);
+	--color3: rgb(202,47,106);
+	--div-width: 700px;
+	--little-box-width: calc(var(--div-width)/3 - 120px);
+	--li-margin: 0 40px auto;
+}
+
+
+body{
+	background-color: var(--color1);
+	color: var(--color2);
+	font-family: 'Noto Serif KR', serif;
+	font-weight: lighter;
+	text-align: justify;
+	font-size: 18px;
+}
+
+h1, h2{
+	font-family: helvetica;
+	color: var(--color3);
+}
+
+h1{
+	font-weight: bold;
+	letter-spacing: 3px;
+	font-size: 30px;
+	text-align: center;
+}
+
+h2{
+	font-size: 24px;
+	font-weight: lighter;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+	transition: 0.3s ease;
+}
+
+a:hover{
+	color: aliceblue;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.button-blue{
+	background-color: skyblue;
+	padding: 5px;
+	border-radius: 15px;
+	box-shadow: 0 10px 10px rgba(0,0,0,.1);
+	transition: 0.3s ease;
+}
+
+.button-blue:hover{
+	background-color: deepskyblue;
+}
+
+#profile-picture{
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	box-shadow: 0 10px 10px rgba(0,0,0,.1);
+}
+
+.small-image{
+	width: var(--little-box-width);
+	height: var(--little-box-width);
+	margin-left: auto;
+  	margin-right: auto;
+  	transition: 0.3s ease;
+  	border-radius: 10px;
+  	box-shadow: 0 10px 10px rgba(0,0,0,.1);
+}
+
+.small-image:hover{
+	transform: scale(1.1);
+	background-color: aliceblue;
+}
+
+#main-div{
+	width: var(--div-width);
+	margin: auto;
+}
+
+.box-white{
+	background-color: white;
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0,0,0,.1);
+	margin: 10px 0 auto;
+}
+
+li {
+  float: left;
+  list-style: none;
+  margin: var(--li-margin);
+}
+
+#last-div{
+	height: calc(var(--div-width)/3 - 30px);
+	}
+
+
+/* Responsive Design */
+
+@media(max-width: 720px){
+	div{
+		--div-width: 500px;
+	}
+	li{
+		--li-margin: 0 25px auto;
+	}
+	.small-image{
+		--little-box-width: calc(var(--div-width)/3 - 90px);
+	}
+	#last-div{
+		height: calc(var(--div-width)/3);
+	}
+}
+
+@media(max-width: 520px){
+	div{
+		--div-width: 300px;
+	}
+	li{
+		--li-margin: 0 10px auto;
+	}
+	.small-image{
+		--little-box-width: calc(var(--div-width)/3 - 60px);
+	}
+	#last-div{
+		height: calc(var(--div-width)/3 + 30px);
+	}
+}
