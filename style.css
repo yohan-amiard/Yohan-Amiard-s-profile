@@ -5,7 +5,6 @@
 	--color3: rgb(202,47,106);
 	--div-width: 700px;
 	--little-box-width: calc(var(--div-width)/3 - 120px);
-	--li-margin: 0 40px auto;
 }
 
 
@@ -99,10 +98,9 @@ a:hover{
 	margin: 10px 0 auto;
 }
 
-li {
-  float: left;
-  list-style: none;
-  margin: var(--li-margin);
+.item-justify{
+	display: flex;
+	justify-content: space-around;
 }
 
 #last-div{
@@ -116,14 +114,11 @@ li {
 	div{
 		--div-width: 500px;
 	}
-	li{
-		--li-margin: 0 25px auto;
-	}
 	.small-image{
-		--little-box-width: calc(var(--div-width)/3 - 90px);
+		--little-box-width: calc(var(--div-width)/3 - 60px);
 	}
 	#last-div{
-		height: calc(var(--div-width)/3);
+		height: calc(var(--div-width)/3 + 30px);
 	}
 }
 
@@ -131,13 +126,10 @@ li {
 	div{
 		--div-width: 300px;
 	}
-	li{
-		--li-margin: 0 10px auto;
-	}
 	.small-image{
-		--little-box-width: calc(var(--div-width)/3 - 60px);
+		--little-box-width: calc(var(--div-width)/3 - 30px);
 	}
 	#last-div{
-		height: calc(var(--div-width)/3 + 30px);
+		height: calc(var(--div-width)/3 + 60px);
 	}
 }
